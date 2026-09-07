@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10231c">
+  <meta name="description" content="Kalyan Infrabuilt — Shiv Ganga Estate, Maharajpur, Kanpur. Explore the project, amenities, videos, gallery and enquiry options.">
+  <title>Kalyan Infrabuilt | Shiv Ganga Estate</title>
+  <link rel="icon" type="image/webp" href="assets/images/kalyan-logo.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page-progress" id="progress"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="nav-wrap container">
+      <a class="brand" href="#home" aria-label="Kalyan Infrabuilt home">
+        <span class="brand-mark"><img src="assets/images/kalyan-logo.webp" alt="Kalyan Infrabuilt logo"></span>
+        <span class="brand-text"><strong>KALYAN</strong><small>INFRABUILT</small></span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#project">Project</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#videos">Videos</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#location">Location</a>
+        <a href="#contact" class="nav-cta">Enquire <span>&#8599;</span></a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-media" aria-hidden="true">
+        <div class="hero-slide active"><img src="assets/images/garden-approach.webp" alt="" fetchpriority="high"></div>
+        <div class="hero-slide"><img src="assets/images/pool-wide.webp" alt=""></div>
+        <div class="hero-slide"><img src="assets/images/estate-building.webp" alt=""></div>
+        <div class="hero-slide"><img src="assets/images/estate-drive.webp" alt=""></div>
+        <div class="hero-slide"><img src="assets/images/estate-courtyard.webp" alt=""></div>
+      </div>
+      <div class="hero-shade"></div>
+      <div class="hero-content container">
+        <div class="hero-copy">
+          <div class="eyebrow">Kalyan Infrabuilt &middot; Kanpur</div>
+          <h1>Properties, Projects &amp;<br><em>Real Estate</em> in Kanpur</h1>
+          <p>Discover Shiv Ganga Estate at Maharajpur &mdash; a plotted community presented through real project visuals, landscaped surroundings and lifestyle-focused amenities.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#project">Explore Shiv Ganga Estate <span>&#8599;</span></a>
+            <a class="btn btn-light-outline" href="#videos"><span class="play">&#9654;</span> Watch walkthrough</a>
+          </div>
+
+          <div class="property-search" id="propertySearch">
+            <div class="search-tabs" role="tablist" aria-label="Property search type">
+              <button class="search-tab active" data-type="Buy" role="tab">Buy</button>
+              <button class="search-tab" data-type="Rent" role="tab">Rent</button>
+              <button class="search-tab" data-type="Projects" role="tab">Projects</button>
+              <button class="search-tab" data-type="Commercial" role="tab">Commercial</button>
+              <button class="search-tab" data-type="Dealers" role="tab">Dealers</button>
+            </div>
+            <form class="search-bar" id="searchForm">
+              <label class="select-field">
+                <span>Property Types</span>
+                <select id="propertyType" aria-label="Property type">
+                  <option>Residential Plot</option>
+                  <option>Premium Plot</option>
+                  <option>Villa / House</option>
+                  <option>Commercial</option>
+                </select>
+              </label>
+              <label class="locality-field">
+                <span class="sr-only">Search locality</span>
+                <input id="locality" type="text" placeholder="Search Locality" autocomplete="off">
+              </label>
+              <button class="locate-btn" type="button" id="locateBtn" title="Use my location" aria-label="Use my location">&#8853;</button>
+              <button class="search-submit" type="submit"><span>&#9906;</span> SEARCH</button>
+            </form>
+            <div class="search-result" id="searchResult" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slides-dots" id="heroSlidesDots" aria-hidden="true">
+        <span class="active"></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="hero-meta">
+        <div class="container hero-meta-inner">
+          <span>MAHARAJPUR &middot; KANPUR &middot; UTTAR PRADESH</span>
+          <span>REAL PROJECT VISUALS &middot; SITE WALKTHROUGHS</span>
+          <span>SHIV GANGA ESTATE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO / ABOUT -->
+    <section class="section intro-section" id="about">
+      <div class="container">
+        <div class="section-label">01 &middot; The story</div>
+        <div class="intro-grid">
+
+          <!-- LEFT side — slides in from left -->
+          <div class="intro-copy reveal-left">
+            <p class="eyebrow dark">A more human way to see real estate</p>
+            <h2>A place you can<br><span>picture yourself in.</span></h2>
+            <p class="lead">Kalyan Infrabuilt presents a real-estate and infrastructure-focused approach built around planned spaces, thoughtful amenities and a stronger sense of place. Through Shiv Ganga Estate, the focus is on creating a plotted environment that feels organised, welcoming and ready for everyday living.</p>
+            <p>The project experience brings together landscaped surroundings, internal roads, leisure and fitness spaces, recreation areas and security-focused infrastructure. The supplied project material also highlights 100% Vastu, 24x7 CCTV, main-gate service, a swimming pool, kids park, sports area, club, gym, steam, yoga, jogging and box cricket.</p>
+            <p>Rather than relying only on plans or promises, this website puts the actual project visuals at the centre &mdash; so a prospective buyer can understand the arrival, open spaces, pool landscape, roads and overall atmosphere before arranging a site visit.</p>
+            <a class="text-link" href="#project">Discover the project <span>&rarr;</span></a>
+          </div>
+
+          <!-- RIGHT side — slides in from right -->
+          <div class="intro-visual reveal-right">
+            <div class="image-frame tilt">
+              <img src="assets/images/estate-building.webp" alt="Shiv Ganga Estate building">
+              <div class="image-badge"><span>01</span> Project visual</div>
+            </div>
+            <div class="floating-note"><strong>Maharajpur</strong><span>Kanpur &middot; Uttar Pradesh</span></div>
+          </div>
+        </div>
+
+        <div class="stats reveal">
+          <div><strong>24x7</strong><span>Main gate service</span></div>
+          <div><strong>30 ft</strong><span>RCC road highlighted</span></div>
+          <div><strong>100%</strong><span>Vastu highlighted</span></div>
+          <div><strong>24x7</strong><span>CCTV highlighted</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT -->
+    <section class="section project-section" id="project">
+      <div class="container">
+        <div class="section-top reveal">
+          <div>
+            <div class="section-label light">02 &middot; Featured project</div>
+            <h2>Shiv Ganga <span>Estate</span></h2>
+          </div>
+          <p>A plotted community at Maharajpur, Kanpur, presented through the real visual character of the site and the supplied project material.</p>
+        </div>
+
+        <div class="project-feature">
+          <!-- LEFT side image -->
+          <div class="project-image reveal-left">
+            <img src="assets/images/garden-approach.webp" alt="Landscaped approach at Shiv Ganga Estate">
+            <div class="image-overlay"></div>
+            <div class="project-image-copy">
+              <span class="pill">Maharajpur &middot; Kanpur</span>
+              <h3>Landscape.<br>Leisure.<br>Location.</h3>
+              <button class="ghost-circle" data-modal="projectModal" aria-label="View project details">&#8599;</button>
+            </div>
+          </div>
+
+          <!-- RIGHT side details -->
+          <div class="project-details reveal-right">
+            <div class="mini-heading">Project snapshot</div>
+            <h3>A calmer way to experience plotted living.</h3>
+            <p>The supplied brochure highlights a swimming pool, car parking, 24x7 CCTV, 100% Vastu, kids park and sports area, 30 ft RCC roads, 24-hour main gate service, box cricket, club, gym, steam, yoga and jogging spaces.</p>
+
+            <div class="detail-list">
+              <button data-detail="pool"><span>&#9673;</span><div><strong>Swimming Pool</strong><small>Leisure-focused pool area</small></div><b>+</b></button>
+              <button data-detail="security"><span>&#9672;</span><div><strong>Security</strong><small>24x7 CCTV &amp; main gate service</small></div><b>+</b></button>
+              <button data-detail="roads"><span>&#8596;</span><div><strong>Internal Roads</strong><small>30 ft RCC road highlighted</small></div><b>+</b></button>
+              <button data-detail="lifestyle"><span>&#10022;</span><div><strong>Lifestyle Spaces</strong><small>Club, fitness, yoga &amp; recreation</small></div><b>+</b></button>
+            </div>
+
+            <button class="btn btn-gold dark-gold" data-modal="projectModal">View complete details <span>&#8599;</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AMENITIES -->
+    <section class="section amenities-section" id="amenities">
+      <div class="container">
+        <div class="section-label">03 &middot; Amenities</div>
+        <div class="section-top">
+          <div>
+            <h2>Details that make<br><span>the setting complete.</span></h2>
+          </div>
+          <p>Highlights below are based on the supplied project brochure and reference material. Click any card to see the detail.</p>
+        </div>
+
+        <div class="amenity-grid">
+          <button class="amenity-card reveal-left" data-detail="pool">
+            <span class="amenity-number">01</span><span class="amenity-icon">&#9673;</span>
+            <h3>Swimming Pool</h3><p>A dedicated pool area adds a resort-like leisure element to the estate.</p><span class="card-arrow">&#8599;</span>
+          </button>
+          <button class="amenity-card reveal" data-detail="vastu">
+            <span class="amenity-number">02</span><span class="amenity-icon">&#8962;</span>
+            <h3>Vastu-Focused Planning</h3><p>The supplied project material highlights 100% Vastu as a key feature.</p><span class="card-arrow">&#8599;</span>
+          </button>
+          <button class="amenity-card reveal-right" data-detail="security">
+            <span class="amenity-number">03</span><span class="amenity-icon">&#9672;</span>
+            <h3>Security</h3><p>24x7 CCTV and main gate service are highlighted in the project material.</p><span class="card-arrow">&#8599;</span>
+          </button>
+          <button class="amenity-card reveal-left" data-detail="sports">
+            <span class="amenity-number">04</span><span class="amenity-icon">&#10022;</span>
+            <h3>Kids &amp; Sports</h3><p>Kids park, sports area and box cricket are included among the listed amenities.</p><span class="card-arrow">&#8599;</span>
+          </button>
+          <button class="amenity-card reveal" data-detail="fitness">
+            <span class="amenity-number">05</span><span class="amenity-icon">&#9678;</span>
+            <h3>Club &amp; Fitness</h3><p>Club area, gym and steam facilities are part of the supplied amenity list.</p><span class="card-arrow">&#8599;</span>
+          </button>
+          <button class="amenity-card reveal-right" data-detail="outdoor">
+            <span class="amenity-number">06</span><span class="amenity-icon">&#8961;</span>
+            <h3>Yoga &amp; Jogging</h3><p>Open yoga space and a jogging track support everyday outdoor routines.</p><span class="card-arrow">&#8599;</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO SLIDER -->
+    <section class="section video-section" id="videos">
+      <div class="container">
+        <div class="video-heading reveal">
+          <div>
+            <div class="section-label light">04 &middot; The visual tour</div>
+            <h2>See it before<br><span>you visit.</span></h2>
+          </div>
+          <p>Real walkthrough footage supplied for the project &mdash; click any video or the expand button to watch it full-screen. Use the arrows or swipe to browse.</p>
+        </div>
+
+        <div class="video-slider reveal" id="videoSlider">
+          <!-- Overlay arrow buttons -->
+          <button class="vslider-arrow vslider-prev" id="prevVideo" aria-label="Previous video">&#8592;</button>
+          <button class="vslider-arrow vslider-next" id="nextVideo" aria-label="Next video">&#8594;</button>
+
+          <!-- Main video card — click anywhere to open fullscreen -->
+          <div class="video-main-card" id="videoMainCard" role="button" tabindex="0" aria-label="Click to watch video fullscreen" style="cursor:pointer">
+            <video id="mainVideo" playsinline preload="metadata" poster="assets/posters/WhatsApp_Video_2026-09-02_at_11.28.18_AM.jpg" muted>
+              <source id="mainVideoSource" src="assets/videos/WhatsApp_Video_2026-09-02_at_11.28.18_AM.mp4" type="video/mp4">
+            </video>
+            <div class="video-vignette"></div>
+            <div class="video-topline"><span id="videoCount">01 / 06</span><span>SHIV GANGA ESTATE</span></div>
+            <!-- Play / pause button — stops propagation so it doesn't open modal -->
+            <button class="main-play" id="mainPlay" aria-label="Play / pause video">&#9654;</button>
+            <div class="video-main-copy">
+              <span class="pill" id="videoTag">Arrival</span>
+              <h3 id="videoTitle">Estate entrance</h3>
+              <p id="videoDescription">A first look at the arrival and approach into the estate.</p>
+            </div>
+            <!-- Prominent fullscreen button -->
+            <button class="video-fullscreen" id="videoFullscreen" aria-label="Open video fullscreen">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <polyline points="9 21 3 21 3 15"></polyline>
+                <line x1="21" y1="3" x2="14" y2="10"></line>
+                <line x1="3" y1="21" x2="10" y2="14"></line>
+              </svg>
+              <span>Watch</span>
+            </button>
+          </div>
+
+          <!-- Dot indicators -->
+          <div class="vslider-dots" id="vsliderDots"></div>
+
+          <!-- Thin progress bar -->
+          <div class="vslider-progress-bar"><span id="videoProgress"></span></div>
+
+          <!-- Thumbnail strip — clicking each thumb opens that video fullscreen -->
+          <div class="video-thumbs" id="videoThumbs"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-top reveal">
+          <div>
+            <div class="section-label">05 &middot; Gallery</div>
+            <h2>Walk through<br><span>the details.</span></h2>
+          </div>
+          <p>Real project photographs supplied for this website. Tap any image for a larger view.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <button class="gallery-item reveal-left"  data-image="assets/images/estate-courtyard.webp"  data-caption="Open spaces &middot; Shiv Ganga Estate"><img src="assets/images/estate-courtyard.webp"  alt="Open space"      loading="lazy"><span>Open spaces &#8599;</span></button>
+          <button class="gallery-item reveal"        data-image="assets/images/pool-wide.webp"         data-caption="Swimming pool &middot; Shiv Ganga Estate"><img src="assets/images/pool-wide.webp"         alt="Swimming pool" loading="lazy"><span>Pool landscape &#8599;</span></button>
+          <button class="gallery-item reveal-right"  data-image="assets/images/estate-building.webp"  data-caption="Estate building"><img src="assets/images/estate-building.webp"  alt="Estate building" loading="lazy"><span>Estate architecture &#8599;</span></button>
+          <button class="gallery-item reveal-left"  data-image="assets/images/covered-lounge.webp"   data-caption="Covered lounge area"><img src="assets/images/covered-lounge.webp"   alt="Covered lounge"  loading="lazy"><span>Covered lounge &#8599;</span></button>
+          <button class="gallery-item reveal"        data-image="assets/images/garden-building.webp"  data-caption="Garden-facing building"><img src="assets/images/garden-building.webp"  alt="Garden view"     loading="lazy"><span>Garden view &#8599;</span></button>
+          <button class="gallery-item reveal-right"  data-image="assets/images/estate-drive.webp"     data-caption="Estate drive"><img src="assets/images/estate-drive.webp"     alt="Estate drive"    loading="lazy"><span>Estate drive &#8599;</span></button>
+          <button class="gallery-item reveal-left"  data-image="assets/images/pool-landscape.webp"   data-caption="Pool landscape"><img src="assets/images/pool-landscape.webp"   alt="Pool landscape"  loading="lazy"><span>Leisure space &#8599;</span></button>
+          <button class="gallery-item reveal"        data-image="assets/images/road-view.webp"         data-caption="Internal road view"><img src="assets/images/road-view.webp"         alt="Internal road"   loading="lazy"><span>Road view &#8599;</span></button>
+          <button class="gallery-item reveal-right"  data-image="assets/images/pool-detail.webp"      data-caption="Pool detail"><img src="assets/images/pool-detail.webp"      alt="Pool detail"     loading="lazy"><span>Pool detail &#8599;</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="section location-section" id="location">
+      <div class="container">
+        <div class="location-card reveal">
+          <!-- LEFT copy -->
+          <div class="location-copy reveal-left">
+            <div class="section-label light">06 &middot; Location context</div>
+            <h2>The bigger<br><span>Kanpur picture.</span></h2>
+            <p>Shiv Ganga Estate is presented in the Maharajpur area of Kanpur. The supplied reference material also highlights the wider Greater Kanpur planning and regional infrastructure context.</p>
+            <div class="location-points">
+              <div><strong>01</strong><span><b>Maharajpur</b><small>Project setting &middot; Kanpur</small></span></div>
+              <div><strong>02</strong><span><b>Greater Kanpur</b><small>Regional planning context</small></span></div>
+              <div><strong>03</strong><span><b>Defence Corridor</b><small>Kanpur node highlighted in reference material</small></span></div>
+            </div>
+            <div class="location-actions">
+              <button class="btn btn-gold" id="mapAction">Open location context <span>&#8599;</span></button>
+              <a class="btn btn-light-outline" href="#contact">Plan a site visit</a>
+            </div>
+          </div>
+          <!-- RIGHT map -->
+          <div class="location-map reveal-right">
+            <img src="assets/images/greater-kanpur-map.webp" alt="Greater Kanpur reference map" loading="lazy">
+            <div class="map-label"><span>GREATER KANPUR</span><strong>Regional reference</strong></div>
+          </div>
+        </div>
+
+        <div class="context-grid">
+          <article class="reveal-left"><img src="assets/images/news-ring-road.webp" alt="Kanpur Ring Road reference" loading="lazy"><div><span>Regional context</span><h3>Kanpur Ring Road</h3><p>Supplied reference material shows the wider connectivity story around Kanpur.</p></div></article>
+          <article class="reveal"><img src="assets/images/news-defence-corridor.webp" alt="Defence corridor reference" loading="lazy"><div><span>Industrial context</span><h3>Defence Corridor</h3><p>The supplied clipping highlights the Kanpur node and surrounding regional activity.</p></div></article>
+          <article class="reveal-right"><img src="assets/images/news-ganga-expressway.webp" alt="Ganga Expressway reference" loading="lazy"><div><span>Infrastructure watch</span><h3>Ganga Expressway</h3><p>Presented as regional context from the supplied project reference material.</p></div></article>
+        </div>
+        <p class="disclaimer">Regional infrastructure references are context only and should not be read as guaranteed travel times, future development at the site, or investment-return promises.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-wrap">
+          <!-- LEFT intro -->
+          <div class="contact-intro reveal-left">
+            <div class="section-label light">07 &middot; Enquiry</div>
+            <h2>Your next visit could be<br><span>the beginning.</span></h2>
+            <p>Come see the setting. Then picture what you can build. Ask for current availability, pricing, plot details or a convenient site visit.</p>
+            <div class="contact-facts">
+              <div><span>PROJECT</span><strong>Shiv Ganga Estate</strong></div>
+              <div><span>LOCATION</span><strong>Maharajpur &middot; Kanpur &middot; U.P.</strong></div>
+              <div><span>REQUEST</span><strong>Availability &middot; Pricing &middot; Site visit</strong></div>
+            </div>
+          </div>
+
+          <!-- RIGHT form -->
+          <form class="enquiry-form reveal-right" id="enquiryForm">
+            <div class="form-heading"><span>Start a conversation</span><strong>Tell us what you are looking for.</strong></div>
+            <div class="form-grid">
+              <label><span>Name</span><input id="name" required placeholder="Your name"></label>
+              <label><span>Phone</span><input id="phone" required inputmode="tel" placeholder="Mobile number"></label>
+              <label><span>Email</span><input id="email" type="email" placeholder="Email address"></label>
+              <label><span>Interested in</span><select id="interest"><option>Plot availability</option><option>Pricing &amp; payment</option><option>Site visit</option><option>Project details</option></select></label>
+              <label class="full"><span>Message</span><textarea id="message" placeholder="Tell us your preferred plot, visit timing or any question."></textarea></label>
+            </div>
+            <button class="btn btn-gold" type="submit">Send enquiry <span>&#8599;</span></button>
+            <p class="form-note">This front-end form confirms the enquiry on the page. Connect it to the client email, CRM or backend before publishing.</p>
+            <div class="form-success" id="formSuccess" hidden></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-top">
+      <a class="brand" href="#home">
+        <span class="brand-mark"><img src="assets/images/kalyan-logo.webp" alt="Kalyan Infrabuilt logo"></span>
+        <span class="brand-text"><strong>KALYAN</strong><small>INFRABUILT</small></span>
+      </a>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#project">Project</a>
+        <a href="#videos">Videos</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="back-top" href="#home">Back to top &#8593;</a>
+    </div>
+    <div class="container footer-bottom">
+      <span class="footer-copy-group">
+        &copy; <span id="year"></span> Kalyan Infrabuilt. All rights reserved.
+        <span class="footer-dev-inline">&middot; Designed &amp; Developed By <a href="https://ftsservices.co/" target="_blank" rel="noopener noreferrer"><strong>FTS Services</strong></a> <span class="footer-assoc">in Association With</span> <a href="https://tasmafivesolutions.com/" target="_blank" rel="noopener noreferrer"><strong>Tasmafive Solutions</strong></a></span>
+      </span>
+      <span>Shiv Ganga Estate &middot; Maharajpur &middot; Kanpur</span>
+    </div>
+  </footer>
+
+  <!-- UNIVERSAL MODAL -->
+  <div class="modal" id="detailModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-box">
+      <button class="modal-close" data-close-modal aria-label="Close">&times;</button>
+      <div class="modal-eyebrow" id="modalEyebrow">PROJECT DETAIL</div>
+      <h2 id="modalTitle">Project detail</h2>
+      <p id="modalText"></p>
+      <div class="modal-meta" id="modalMeta"></div>
+    </div>
+  </div>
+
+  <!-- IMAGE LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" data-close-lightbox aria-label="Close image">&times;</button>
+    <div class="lightbox-inner">
+      <img id="lightboxImage" src="" alt="">
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- VIDEO FULLSCREEN MODAL -->
+  <div class="video-modal" id="videoModal" aria-hidden="true">
+    <button class="lightbox-close" data-close-video aria-label="Close video">&times;</button>
+    <video id="modalVideo" controls playsinline></video>
+    <div class="modal-video-caption">
+      <strong id="modalVideoTitle"></strong>
+      <span id="modalVideoDescription"></span>
+    </div>
+    <!-- In-modal prev/next arrows -->
+    <button class="vmodal-arrow vmodal-prev" id="modalPrev" aria-label="Previous video">&#8592;</button>
+    <button class="vmodal-arrow vmodal-next" id="modalNext" aria-label="Next video">&#8594;</button>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
