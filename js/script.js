@@ -500,16 +500,39 @@ $('#mapAction')?.addEventListener('click', () => {
   openModal();
 });
 
-// Enquiry form.
-$('#enquiryForm')?.addEventListener('submit', e => {
+// Enquiry form delivery.
+$('#enquiryForm')?.addEventListener('submit', async e => {
   e.preventDefault();
-  const name = $('#name').value.trim();
-  const interest = $('#interest').value;
+  const form = e.target;
+  const submitButton = form.querySelector('button[type="submit"]');
   const success = $('#formSuccess');
-  success.hidden = false;
-  success.textContent = `Thank you${name ? ', ' + name : ''}. Your enquiry for ${interest.toLowerCase()} has been captured on this page. The form can now be connected to the client verified email, CRM or backend.`;
-  e.target.reset();
-  toast('Enquiry captured successfully.');
+  const name = $('#name').value.trim();
+  submitButton.disabled = true;
+  submitButton.classList.add('is-sending');
+  submitButton.innerHTML = 'Sending enquiry <span>&#8230;</span>';
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: {Accept: 'application/json'}
+    });
+    if (!response.ok) throw new Error('Request failed');
+    success.hidden = false;
+    success.className = 'form-success';
+    success.textContent = `Thank you${name ? ', ' + name : ''}. Your enquiry has been submitted successfully. Our team will contact you soon.`;
+    form.reset();
+    toast('Enquiry submitted successfully.');
+  } catch (error) {
+    success.hidden = false;
+    success.className = 'form-success form-error';
+    success.textContent = 'We could not submit your enquiry right now. Please try again or call us directly.';
+    toast('Submission failed. Please try again.');
+  } finally {
+    submitButton.disabled = false;
+    submitButton.classList.remove('is-sending');
+    submitButton.innerHTML = 'Send enquiry <span>&#8599;</span>';
+  }
 });
 
 // Escape closes all overlays. Arrow keys navigate video modal.
@@ -541,4 +564,15 @@ if (heroSlides.length) {
     heroSlides[heroIndex]?.classList.add('active');
     heroDots[heroIndex]?.classList.add('active');
   }, 5200);
+}
+
+// Rotate the three-image contact visual while keeping the editorial frame fixed.
+const contactPhotoSlides = $$('.contact-photo-slide');
+let contactPhotoIndex = 0;
+if (contactPhotoSlides.length > 1) {
+  setInterval(() => {
+    contactPhotoSlides[contactPhotoIndex]?.classList.remove('active');
+    contactPhotoIndex = (contactPhotoIndex + 1) % contactPhotoSlides.length;
+    contactPhotoSlides[contactPhotoIndex]?.classList.add('active');
+  }, 4600);
 }
