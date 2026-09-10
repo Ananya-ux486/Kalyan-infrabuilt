@@ -1036,3 +1036,270 @@ h2 span{color:#8d713e}
   .photo-caption{right:18px;bottom:24px;font-size:9px}
   .footer-contact{justify-content:flex-start;max-width:none}
 }
+<<<<<<< HEAD
+=======
+
+/* =============================================
+   NEW CONTACT CARDS — 3-equal-card layout
+   ============================================= */
+.contact-new-wrap{padding:20px 0 70px}
+
+/* ── Header ── */
+.contact-new-header{text-align:center;margin-bottom:52px}
+.contact-new-header .contact-kicker{justify-content:center}
+.contact-new-header h2{
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:clamp(40px,4.8vw,66px);
+  line-height:.98;
+  letter-spacing:-.045em;
+  margin:10px 0 18px;
+}
+.contact-new-header h2 em{color:#a17e46;font-style:italic;font-weight:500}
+.contact-new-header .contact-lead{
+  font-size:15.5px;
+  color:#3a4240;
+  margin:0 auto;
+  text-align:center;
+  max-width:540px;
+  line-height:1.7;
+  font-weight:500;
+  letter-spacing:.01em;
+  text-shadow:none;
+}
+
+/* ── Grid ── */
+.contact-cards-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  align-items:stretch;
+}
+
+/* ── Individual card ── */
+.ccard{
+  background:#fff;
+  border-radius:22px;
+  padding:36px 30px 32px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  position:relative;
+  overflow:hidden;
+  transition:transform .3s ease, box-shadow .3s ease;
+  box-shadow:0 4px 30px rgba(0,0,0,.18);
+  border:none;
+}
+/* gold top accent bar */
+.ccard:after{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;
+  height:4px;
+  background:linear-gradient(90deg,#a17e46,#e7c980,#a17e46);
+}
+/* subtle corner decoration */
+.ccard:before{
+  content:"";
+  position:absolute;
+  width:200px;height:200px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(203,165,93,.07) 0%,transparent 70%);
+  right:-60px;bottom:-60px;
+  pointer-events:none;
+}
+.ccard:hover{
+  transform:translateY(-8px);
+  box-shadow:0 24px 55px rgba(0,0,0,.22);
+}
+
+/* ── Icon wrap ── */
+.ccard-icon-wrap{
+  width:64px;height:64px;
+  background:linear-gradient(135deg,#10231c,#1e4035);
+  border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:22px;
+  flex-shrink:0;
+  box-shadow:0 8px 22px rgba(16,35,28,.3);
+  position:relative;
+}
+/* inner gold ring effect */
+.ccard-icon-wrap:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:16px;
+  border:1px solid rgba(231,201,128,.3);
+}
+.ccard-icon{color:#e7c980;font-size:24px;line-height:1}
+
+/* ── Social icon wrap ── */
+.ccard-icon-wrap--social{
+  width:auto;height:auto;
+  background:transparent;
+  border-radius:0;
+  box-shadow:none;
+  gap:12px;
+  flex-direction:row;
+  padding:0;
+  margin-bottom:22px;
+}
+.ccard-icon-wrap--social:before{display:none}
+.ccard-social-icon{
+  width:56px;height:56px;
+  border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  transition:.25s;
+  color:#fff;
+  box-shadow:0 6px 20px rgba(0,0,0,.2);
+  flex-shrink:0;
+}
+.ccard-fb{background:linear-gradient(145deg,#1877F2,#0d5fca)}
+.ccard-fb:hover{background:linear-gradient(145deg,#0d5fca,#0a4ba0);transform:translateY(-4px);box-shadow:0 10px 28px rgba(24,119,242,.4)}
+.ccard-ig{background:linear-gradient(145deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888)}
+.ccard-ig:hover{filter:brightness(1.12);transform:translateY(-4px);box-shadow:0 10px 28px rgba(188,24,136,.4)}
+
+/* ── Text ── */
+.ccard-label{
+  font-size:9px;font-weight:800;
+  letter-spacing:.24em;
+  color:#a17e46;
+  margin-bottom:7px;
+  text-transform:uppercase;
+}
+.ccard-title{
+  font-family:var(--serif);
+  font-size:26px;
+  font-weight:600;
+  color:#0f1f19;
+  margin:0 0 11px;
+  line-height:1.1;
+}
+.ccard-desc{
+  font-size:13px;
+  color:#4a5550;
+  line-height:1.7;
+  margin:0;
+  flex:1;
+}
+
+/* ── Divider ── */
+.ccard-divider{
+  width:44px;height:3px;
+  background:linear-gradient(90deg,#a17e46,#e7c980);
+  border-radius:3px;
+  margin:20px 0 18px;
+  flex-shrink:0;
+}
+
+/* ── Call number links ── */
+.ccard-numbers{display:flex;flex-direction:column;gap:9px;width:100%}
+.ccard-number-link{
+  display:flex;align-items:center;justify-content:space-between;
+  font-size:13.5px;font-weight:700;
+  color:#0f1f19;
+  text-decoration:none;
+  padding:11px 15px;
+  border-radius:11px;
+  background:linear-gradient(135deg,rgba(16,35,28,.04),rgba(16,35,28,.02));
+  border:1px solid rgba(161,126,70,.25);
+  transition:.25s;
+  letter-spacing:.015em;
+}
+.ccard-number-link span{
+  width:28px;height:28px;
+  background:#0f1f19;
+  color:#e7c980;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;
+  flex-shrink:0;
+  transition:.25s;
+}
+.ccard-number-link:hover{
+  background:linear-gradient(135deg,#10231c,#1e4035);
+  color:#fff;
+  border-color:transparent;
+  transform:translateX(4px);
+}
+.ccard-number-link:hover span{background:#a17e46;color:#fff}
+
+/* ── Email link ── */
+.ccard-email-link{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  font-size:12.5px;font-weight:700;
+  color:#0f1f19;
+  text-decoration:none;
+  padding:11px 15px;
+  border-radius:11px;
+  background:linear-gradient(135deg,rgba(16,35,28,.04),rgba(16,35,28,.02));
+  border:1px solid rgba(161,126,70,.25);
+  transition:.25s;
+  width:100%;
+  white-space:nowrap;
+  overflow:hidden;
+}
+.ccard-email-link span{
+  width:28px;height:28px;
+  background:#0f1f19;
+  color:#e7c980;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;
+  flex-shrink:0;
+  transition:.25s;
+}
+.ccard-email-link:hover{
+  background:linear-gradient(135deg,#10231c,#1e4035);
+  color:#fff;
+  border-color:transparent;
+}
+.ccard-email-link:hover span{background:#a17e46;color:#fff}
+
+/* ── Social handle link ── */
+.ccard-handle-link{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  font-size:13px;font-weight:700;
+  color:#0f1f19;
+  text-decoration:none;
+  padding:11px 15px;
+  border-radius:11px;
+  background:linear-gradient(135deg,rgba(16,35,28,.04),rgba(16,35,28,.02));
+  border:1px solid rgba(161,126,70,.25);
+  transition:.25s;
+  width:100%;
+}
+.ccard-handle-link span{
+  width:28px;height:28px;
+  background:#0f1f19;
+  color:#e7c980;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;
+  flex-shrink:0;
+  transition:.25s;
+}
+.ccard-handle-link:hover{
+  background:linear-gradient(135deg,#10231c,#1e4035);
+  color:#fff;
+  border-color:transparent;
+}
+.ccard-handle-link:hover span{background:#a17e46;color:#fff}
+
+/* ── Responsive ── */
+@media(max-width:900px){
+  .contact-cards-grid{grid-template-columns:1fr 1fr}
+  .contact-cards-grid .ccard:last-child{grid-column:1/-1;max-width:440px;margin:0 auto;width:100%}
+}
+@media(max-width:580px){
+  .contact-new-wrap{padding:10px 0 45px}
+  .contact-new-header{margin-bottom:32px}
+  .contact-cards-grid{grid-template-columns:1fr}
+  .contact-cards-grid .ccard:last-child{grid-column:auto;max-width:none}
+  .ccard{padding:28px 22px 26px}
+  .ccard-title{font-size:22px}
+  .ccard-email-link{font-size:11.5px}
+  .contact-new-header .contact-lead{font-size:14px}
+}
+>>>>>>> 99414ea (Updated contact)
