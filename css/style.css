@@ -1036,8 +1036,6 @@ h2 span{color:#8d713e}
   .photo-caption{right:18px;bottom:24px;font-size:9px}
   .footer-contact{justify-content:flex-start;max-width:none}
 }
-<<<<<<< HEAD
-=======
 
 /* =============================================
    NEW CONTACT CARDS — 3-equal-card layout
@@ -1058,7 +1056,7 @@ h2 span{color:#8d713e}
 .contact-new-header h2 em{color:#a17e46;font-style:italic;font-weight:500}
 .contact-new-header .contact-lead{
   font-size:15.5px;
-  color:#3a4240;
+  color:#1e2b25;
   margin:0 auto;
   text-align:center;
   max-width:540px;
@@ -1302,4 +1300,3 @@ h2 span{color:#8d713e}
   .ccard-email-link{font-size:11.5px}
   .contact-new-header .contact-lead{font-size:14px}
 }
->>>>>>> 99414ea (Updated contact)
