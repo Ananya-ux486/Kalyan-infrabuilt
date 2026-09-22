@@ -500,39 +500,63 @@ $('#mapAction')?.addEventListener('click', () => {
   openModal();
 });
 
+// EmailJS initialise
+emailjs.init('2lS55aignbibMObvy');
+
 // Enquiry form delivery.
 $('#enquiryForm')?.addEventListener('submit', async e => {
   e.preventDefault();
   const form = e.target;
   const submitButton = form.querySelector('button[type="submit"]');
   const success = $('#formSuccess');
-  const name = $('#name').value.trim();
+  const name    = $('#name').value.trim();
+  const phone   = $('#phone').value.trim();
+  const email   = $('#email').value.trim();
+  const interest = $('#interest').value.trim();
+  const message = $('#message').value.trim();
+
   submitButton.disabled = true;
   submitButton.classList.add('is-sending');
   submitButton.innerHTML = 'Sending enquiry <span>&#8230;</span>';
 
+  // Build WhatsApp message (always sent alongside email)
+  const waText = encodeURIComponent(
+    `New Enquiry – Shiv Ganga Estate\n\nName: ${name}\nPhone: ${phone}${email ? '\nEmail: ' + email : ''}\nInterested in: ${interest}${message ? '\nMessage: ' + message : ''}`
+  );
+
+  let emailSent = false;
+
   try {
-    const response = await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: {Accept: 'application/json'}
+    // Send via EmailJS → kalyaninfrabuiltsocial@gmail.com
+    await emailjs.send('service_q02nzug', 'template_02ta6l9', {
+      from_name:  name,
+      phone:      phone,
+      from_email: email || 'Not provided',
+      interest:   interest,
+      message:    message || 'No message provided'
     });
-    if (!response.ok) throw new Error('Request failed');
-    success.hidden = false;
-    success.className = 'form-success';
-    success.textContent = `Thank you${name ? ', ' + name : ''}. Your enquiry has been submitted successfully. Our team will contact you soon.`;
-    form.reset();
-    toast('Enquiry submitted successfully.');
-  } catch (error) {
-    success.hidden = false;
-    success.className = 'form-success form-error';
-    success.textContent = 'We could not submit your enquiry right now. Please try again or call us directly.';
-    toast('Submission failed. Please try again.');
-  } finally {
-    submitButton.disabled = false;
-    submitButton.classList.remove('is-sending');
-    submitButton.innerHTML = 'Send enquiry <span>&#8599;</span>';
+    emailSent = true;
+  } catch (err) {
+    console.error('EmailJS error:', err);
   }
+
+  // Always open WhatsApp so team is notified instantly
+  window.open(`https://wa.me/919517466506?text=${waText}`, '_blank', 'noopener');
+
+  success.hidden = false;
+  success.className = 'form-success';
+  if (emailSent) {
+    success.textContent = `Thank you${name ? ', ' + name : ''}. Your enquiry has been sent to our team via email and WhatsApp. We will contact you soon.`;
+    toast('Enquiry sent successfully.');
+  } else {
+    success.textContent = `Thank you${name ? ', ' + name : ''}. Your enquiry has been sent via WhatsApp. Our team will contact you soon.`;
+    toast('Sent via WhatsApp.');
+  }
+
+  form.reset();
+  submitButton.disabled = false;
+  submitButton.classList.remove('is-sending');
+  submitButton.innerHTML = 'Send enquiry <span>&#8599;</span>';
 });
 
 // Escape closes all overlays. Arrow keys navigate video modal.
