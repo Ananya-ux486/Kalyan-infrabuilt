@@ -590,8 +590,8 @@ h2 span{color:#8d713e}
   .footer-copy-group{
     flex-direction:row;
     flex-wrap:nowrap;
-    white-space:nowrap;
     align-items:center;
+    white-space:nowrap;
     gap:4px;
     font-size:8px;
     line-height:1.5;
@@ -602,6 +602,7 @@ h2 span{color:#8d713e}
     font-size:8px;
     line-height:1.8;
     white-space:normal;
+    margin-top:1px;
   }
   /* Make sure ©2026 stays on one line */
   .footer-copy-group > span:first-child{
